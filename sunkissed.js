@@ -69,10 +69,7 @@ function clearError(input) {
 
 // Toggle the menu when the hamburger icon is clicked
 function toggleMenu() {
-    const menu = document.querySelector('.navbar__menu');
-    menu.classList.toggle('active');
+    const menu = document.querySelector('.off-screen-menu');
+    menu.classList.toggle('active'); // Toggle 'active' class
 }
-
-// Add event listener to the hamburger icon
-document.querySelector('.hamburger-menu').addEventListener('click', toggleMenu);
 
