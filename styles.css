@@ -36,6 +36,22 @@ h2, h3, h4, h5 {
  
 }
 
+/* Mobile Font Size Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;  /* Smaller font size on mobile */
+    }
+
+    h2, h3, h4, h5 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
 .navbar {
     background: #f5f5f5;
     height: 80px;
@@ -158,6 +174,22 @@ h2, h3, h4, h5 {
     background-color: #c98d2e;
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+    #main_img {
+        max-height: 50vh;  /* Make image smaller on mobile */
+    }
+
+    .main__content h1 {
+        font-size: 2.5rem;  /* Adjust font size for mobile */
+    }
+
+    .main__btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;  /* Adjust button size */
+    }
+}
+
 .about__overview{
     width: 80%; 
     margin: 30px auto; 
@@ -244,6 +276,28 @@ button {
 
 button:hover {
     background-color: #c98d2e;
+}
+
+/* Mobile Footer Styles */
+@media (max-width: 768px) {
+    .footer__container {
+        padding: 30px 10px;
+        height: auto;  /* Adjust footer height */
+    }
+
+    .footer__social ul {
+        flex-direction: column;
+        gap: 20px;  /* Stack social icons vertically */
+    }
+
+    .footer__links {
+        margin-top: 20px;
+    }
+
+    .footer__links a {
+        margin: 0 10px;
+        font-size: 16px;
+    }
 }
 
 /*About Us Page*/
@@ -516,3 +570,39 @@ form div.incorrect input{
     font-family: 'Ovo', serif;
     color: #4c7031; 
 }
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .navbar__menu {
+        flex-direction: column;
+        align-items: flex-start;  /* Align links to the left */
+        width: 100%;
+    }
+
+    .menu__item {
+        padding: 1rem 0;  /* Add space between links */
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+    }
+
+    .navbar__menu.active {
+        display: flex;
+    }
+}
+
+/* Mobile-First Layout Adjustments */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+
+    .about__overview {
+        width: 100%;  /* Full width on mobile */
+        padding: 10px;
+    }
+}
+
