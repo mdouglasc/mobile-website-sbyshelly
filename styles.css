@@ -63,6 +63,19 @@ h2, h3, h4, h5 {
     top: 0;
 }
 
+/* Hamburger menu icon */
+.ham-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+.ham-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #4c7031;
+    border-radius: 5px;
+}
 .navbar__container {
     display: flex;
     justify-content: space-between;
@@ -89,17 +102,30 @@ h2, h3, h4, h5 {
 
 .menu__item {
     padding: 0 1rem;
-    height: 80px;
 }
 
 .menu__links {
     color: #4c7031;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-decoration: none;
-    padding: 0 1rem;
+}
+
+
+/* Off-screen menu */
+.off-screen-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #f5f5f5;
+    width: 100%;
     height: 100%;
+    z-index: 9999;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.off-screen-menu.active {
+    display: flex;
 }
 
 .menu__links:hover {
@@ -130,6 +156,28 @@ h2, h3, h4, h5 {
 
 .button:hover {
     transform: scale(1.1);
+}
+
+/* Media query for mobile (below 768px) */
+@media (max-width: 768px) {
+    /* Show the hamburger menu on mobile */
+    .ham-menu {
+        display: flex;
+    }
+
+    /* Hide the navbar by default */
+    .navbar__menu {
+        display: none;
+    }
+
+    /* Display the navbar menu when active */
+    .navbar__menu.active {
+        display: flex;
+    }
+
+    .off-screen-menu {
+        display: flex; /* Show on mobile */
+    }
 }
 
 .main{
@@ -569,40 +617,5 @@ form div.incorrect input{
 .bootstrap-main label {
     font-family: 'Ovo', serif;
     color: #4c7031; 
-}
-
-/* Media Query for Mobile */
-@media (max-width: 768px) {
-    .navbar__menu {
-        flex-direction: column;
-        align-items: flex-start;  /* Align links to the left */
-        width: 100%;
-    }
-
-    .menu__item {
-        padding: 1rem 0;  /* Add space between links */
-    }
-
-    .hamburger-menu {
-        display: block;
-        cursor: pointer;
-        font-size: 2rem;
-    }
-
-    .navbar__menu.active {
-        display: flex;
-    }
-}
-
-/* Mobile-First Layout Adjustments */
-@media (max-width: 768px) {
-    main {
-        padding: 20px;
-    }
-
-    .about__overview {
-        width: 100%;  /* Full width on mobile */
-        padding: 10px;
-    }
 }
 
