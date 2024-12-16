@@ -65,16 +65,22 @@ h2, h3, h4, h5 {
 
 /* Hamburger menu icon */
 .ham-menu {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
 }
+
 .ham-menu span {
-    width: 25px;
-    height: 3px;
+    width: 100%;
+    height: 5px;
     background-color: #4c7031;
-    border-radius: 5px;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%
+    left:50%
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
 }
 .navbar__container {
     display: flex;
@@ -125,7 +131,7 @@ h2, h3, h4, h5 {
     align-items: center;
 }
 .off-screen-menu.active {
-    display: flex;
+    right:0;
 }
 
 .menu__links:hover {
