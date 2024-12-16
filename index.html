@@ -9,41 +9,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Ovo&family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
-    <!-- Hamburger Menu Icon -->
-<div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+<!-- Navbar -->
+<div class="ham-menu" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
-    <nav class="navbar">
-        <div class="navbar__container">
-           <!-- Logo -->
+<nav class="navbar">
+    <div class="navbar__container">
+        <!-- Logo -->
         <img src="imgs/sunkissed.jpeg" alt="Sunkissed by Shelly logo" class="logo">
 
-            <!-- Navbar menu links -->
-            <ul class="navbar__menu">
-                <li class="menu__item">
-                    <a href="/" class="menu__links">Home</a>
-                </li>
-                <li class="menu__item">
-                    <a href="shop.html" class="menu__links">Shop</a>
-                </li>
-                <li class="menu__item">
-                    <a href="about.html" class="menu__links">About Us</a>
-                </li>
-                <li class="menu__item">
-                    <a href="guides.html" class="menu__links">Skincare Guides</a>
-                </li>
-                <li class="menu__item">
-                    <a href="offers.html" class="menu__links">Special Offers</a>
-                </li>
-                <li class="menu__item">
-                    <a href="contact.html" class="menu__links">Contact Us</a>
-                </li>
-                <li class="menu__btn">
-                    <a href="SignUp.html" class="button">Join</a>
-                </li>
+        <!-- Navbar menu links (Initially hidden on mobile) -->
+        <div class="off-screen-menu">
+            <ul>
+                <li><a href="/" class="menu__links">Home</a></li>
+                <li class="menu__item"><a href="shop.html" class="menu__links">Shop</a></li>
+                <li class="menu__item"><a href="about.html" class="menu__links">About Us</a></li>
+                <li class="menu__item"><a href="guides.html" class="menu__links">Skincare Guides</a></li>
+                <li class="menu__item"><a href="offers.html" class="menu__links">Special Offers</a></li>
+                <li class="menu__item"><a href="contact.html" class="menu__links">Contact Us</a></li>
+                <li class="menu__btn"><a href="SignUp.html" class="button">Join</a></li>
             </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
 <!-- Hero Section -->
  <main>
